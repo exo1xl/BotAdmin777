@@ -1,6 +1,4 @@
 discord.py
-time
-asyncio
 os
 youtube_dl
 shutil
