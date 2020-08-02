@@ -2500,3 +2500,4 @@ async def report(ctx, member: discord.Member, reason = ''):
     await Adminchat.send(f'{ Admin.mention }')
     await ctx.send(f'{ author.mention } report sent')
 token = os.environ.get('BOT_TOKEN')
+bot.run(token)
