@@ -73,7 +73,7 @@ async def mute( ctx, member: discord.Member ,Time: int ,type: str , reason: str 
             embed.add_field(name='Time' , value=f'{ Time } { type }', inline=False)
             embed.set_footer(text='Author of bot jwix777')
             await ctx.send(embed=embed)
-            asyncio.sleep(1)
+            await asyncio.sleep(1)
             await member.remove_roles(mute_role)
             await ctx.send(f'{ member } has been unmuted')
         if type == 'm':
@@ -86,7 +86,7 @@ async def mute( ctx, member: discord.Member ,Time: int ,type: str , reason: str 
             embed.add_field(name='Time' , value=f'{ Time } { type }', inline=False)
             embed.set_footer(text='Author of bot jwix777')
             await ctx.send(embed=embed)
-            asyncio.sleep(60)
+            await asyncio.sleep(60)
             await member.remove_roles(mute_role)
             await ctx.send(f'{ member } has been unmuted')
         if type == 'h':
@@ -99,7 +99,7 @@ async def mute( ctx, member: discord.Member ,Time: int ,type: str , reason: str 
             embed.add_field(name='Time' , value=f'{ Time } { type }', inline=False)
             embed.set_footer(text='Author of bot jwix777')
             await ctx.send(embed=embed)
-            asyncio.sleep(3600)
+            await asyncio.sleep(3600)
             await member.remove_roles(mute_role)
             await ctx.send(f'{ member } has been unmuted')
         if type == 'd':
