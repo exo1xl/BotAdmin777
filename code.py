@@ -21,7 +21,8 @@ async def test(ctx, arg):  # создаем асинхронную фунцию 
     testarg = arg.rsplit('(', 5)
     await ctx.send(testarg)  # отправляем обратно аргумент
 @bot.command(pass_context=True)
-async def clear( ctx, amount = 1000 ):
+@has_permissionns(control_messages=True)
+async def clear( ctx, amount = 100 ):
     await ctx.channel.purge( limit = amount )
 @bot.command(pass_context=True)
 @has_permissions(kick_members=True)
