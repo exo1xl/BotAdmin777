@@ -19,11 +19,7 @@ async def on_ready():
 @bot.command(pass_context=True)  # разрешаем передавать агрументы
 async def test(ctx, arg):  # создаем асинхронную фунцию бота
     testarg = arg.rsplit('(', 5)
-    await ctx.send(testarg)  # отправляем обратно аргумент
-@bot.command(pass_context=True)
-@has_permissionns(Administrator=True)
-async def clear( ctx, amount = 100 ):
-    await ctx.channel.purge( limit = amount )
+    await ctx.send(testarg) 
 @bot.command(pass_context=True)
 @has_permissions(kick_members=True)
 async def kick( ctx, member: discord.Member, *, reason = ''):
