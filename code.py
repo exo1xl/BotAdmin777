@@ -2369,5 +2369,11 @@ async def report(ctx, member: discord.Member, reason = ''):
     await Adminchat.send(embed=embed)
     await Adminchat.send(f'{ Admin.mention }')
     await ctx.send(f'{ author.mention } report sent')
+@bot.command(pass_context=True)
+async def hug(ctx)
+author = ctx.message.author:
+    Await ctx.send(f'{ author.mention } hug { mwmber.mention }')
+    Await time.sleep(1)
+    Pass
 token = os.environ.get('BOT_TOKEN')
 bot.run(token)
