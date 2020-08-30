@@ -2370,7 +2370,7 @@ async def report(ctx, member: discord.Member, reason = ''):
     await Adminchat.send(f'{ Admin.mention }')
     await ctx.send(f'{ author.mention } report sent')
 @bot.command(pass_context=True)
-async def hug(ctx, member)
+async def hug(ctx, member):
 author = ctx.message.author:
     Await ctx.send(f'{ author.mention } hug { mwmber.mention }')
     Await time.sleep(1)
