@@ -2372,7 +2372,18 @@ async def report(ctx, member: discord.Member, reason = ''):
 @bot.command(pass_context=True)
 async def hug(ctx, member: discord.Member):
     author = ctx.message.author
-    await ctx.send(f'{ author.mention } hug { member.mention }')
-    Pass
+    embed=discord.Embed(title= 'Hug', color=0x300080)
+    embed.add_field(name=':)', value =f'{ author.mention } hug { member.mention }')
+    embed.set_image(url='https://media1.tenor.com/images/3820ad0d9611dfc9c492e3d689b11c23/tenor.gif?itemid=15793127')
+    await ctx.send(embed=embed)
+    pass
+@bot.command(pass_context=True)
+async def five(ctx, member: discord.Member):
+    author = ctx.message.author
+    embed=discord.Embed(title= 'Five', color=0x300080)
+    embed.add_field(name=':)', value =f'{ author.mention } gave five { member.mention }')
+    embed.set_image(url='https://media1.tenor.com/images/7b1f06eac73c36721912edcaacddf666/tenor.gif?itemid=10559431')
+    await ctx.send(embed=embed)
+    pass
 token = os.environ.get('BOT_TOKEN')
 bot.run(token)
