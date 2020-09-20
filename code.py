@@ -57,7 +57,7 @@ async def unban( ctx,* ,member ):
     pass 
 @bot.command(pass_context=True)
 @has_permissions(manage_roles=True)
-async def mute( ctx, member: discord.Member ,Time: int ,type: str , reason: str ):      
+async def mute( ctx, member: discord.Member ,Time: int ,type: str ,*, reason: str ):      
     author = ctx.message.author
     if Time == 1:
         if type == 's':
@@ -2357,7 +2357,7 @@ async def unmute( ctx, member: discord.Member, *, reason = ''):
     await member.remove_roles(mute_role)
     await ctx.send(f" { member } has been unmuted")
 @bot.command(pass_context=True)
-async def report(ctx, member: discord.Member, reason = ''):
+async def report(ctx, member: discord.Member,*, reason = ''):
     Admin = get(ctx.guild.roles, name='Admin')
     Adminchat = get(ctx.guild.channels, name='notices')
     author = ctx.message.author
