@@ -13,6 +13,7 @@ import youtube_dl
 import shutil
 vol = 0.5
 bot = commands.Bot(command_prefix='/')
+bot.remove_command('help')
 @bot.event
 async def on_ready():
      print('Бот подключён')
@@ -2385,5 +2386,20 @@ async def five(ctx, member: discord.Member):
     embed.set_image(url='https://media1.tenor.com/images/7b1f06eac73c36721912edcaacddf666/tenor.gif?itemid=10559431')
     await ctx.send(embed=embed)
     pass
+@bot.command(pass_context=True,)
+async def help(ctx):
+    embed=discord.Embed(title="Help", description="Commands commands and commands", color=0x00e4f5)
+    embed.set_author(name="jwix777")
+    embed.add_field(name="ban ", value="ban member. Need permission ban_members", inline=False)
+    embed.add_field(name="five  ", value="Just Rp command for fun :)", inline=False)
+    embed.add_field(name="help", value="Shows this message", inline=False)
+    embed.add_field(name="hug", value="Just Rp command for fun :)", inline=False)
+    embed.add_field(name="mute", value="mute member. Need permission manage_roles", inline=False)
+    embed.add_field(name="kick", value="kick members. Need permission kick_members", inline=False)
+    embed.add_field(name="report", value="send report for a violator. For members.", inline=False)
+    embed.add_field(name="unban", value="unban member. Need permission ban_members", inline=False)
+    embed.add_field(name="unmute", value="unmute member. Need permission manage_roles", inline=False)
+    embed.set_footer(text="Support server https://discord.gg/SEk4DsW")
+    await ctx.send(embed=embed)
 token = os.environ.get('BOT_TOKEN')
 bot.run(token)
