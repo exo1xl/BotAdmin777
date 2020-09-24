@@ -2401,5 +2401,77 @@ async def help(ctx):
     embed.add_field(name="unmute", value="unmute member. Need permission manage_roles", inline=False)
     embed.set_footer(text="Support server https://discord.gg/SEk4DsW")
     await ctx.send(embed=embed)
+@bot.command(pass_context=True)
+async def command(ctx, command):
+    if command=='ban':
+        embed=discord.Embed(title="Help", description="Command ban", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="ban member reason", inline=False)
+        embed.add_field(name="description", value="ban member", inline=False)
+        embed.add_field(name="need permission", value="ban_members", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='five':
+        embed=discord.Embed(title="Help", description="Command five", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="five member", inline=False)
+        embed.add_field(name="description", value="give five to member. RP command for fun", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='kick':
+        embed=discord.Embed(title="Help", description="Command kick", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="kick member reason", inline=False)
+        embed.add_field(name="description", value="kick member", inline=False)
+        embed.add_field(name="need permission", value="kick_members", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='hug':
+        embed=discord.Embed(title="Help", description="Command hug", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="hug member", inline=False)
+        embed.add_field(name="description", value="hug member. RP command for fun", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='mute':
+        embed=discord.Embed(title="Help", description="Command mute", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="mute member time(1-30) type of time(s m h d) reason", inline=False)
+        embed.add_field(name="description", value="mute member", inline=False)
+        embed.add_field(name="types of time", value="s - second, m - minute, h - hours, d - day, ", inline=False)
+        embed.add_field(name="need permission", value="manage_roles", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='report':
+        embed=discord.Embed(title="Help", description="Command report", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="report member reason", inline=False)
+        embed.add_field(name="description", value="report member. And justice will be served ", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='unmute':
+        embed=discord.Embed(title="Help", description="Command unmute", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="unmute member reason", inline=False)
+        embed.add_field(name="description", value="unmute member", inline=False)
+        embed.add_field(name="need permission", value="manage_roles", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
+    if command=='unban':
+        embed=discord.Embed(title="Help", description="Command unban", color=0xf3f702)
+        embed.add_field(name="Syntax ", value="unban member reason", inline=False)
+        embed.add_field(name="description", value="unban member", inline=False)
+        embed.add_field(name="need permission", value="ban_members", inline=False)
+        embed.set_footer(text="support server https://discord.gg/SEk4DsW")
+        await ctx.send(embed=embed)
+        ok
+        pass
 token = os.environ.get('BOT_TOKEN')
 bot.run(token)
